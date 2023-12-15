@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './component/NavBar';
+import Order from './component/Order';
+import OrderInfo from './component/OrderInfo';
+import Products from './component/Products';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{maxWidth:'100%',margin:'auto'}}>
+   <NavBar/>
+   <Order/>
+   <OrderInfo/>
+   <Products/>
     </div>
   );
 }
