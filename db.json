@@ -7,7 +7,7 @@
       "brand": "Hormel Black Labelmany",
       "price": "$60.67/6*1LB",
       "quantity": "0",
-      "status": "Missing - Urgent"
+      "status": "Approved"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "brand": "Hormel Black Labelmany",
       "price": "$60.67/6*1LB",
       "quantity": "0",
-      "status": "Missing - Urgent"
+      "status": "Approved"
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       "brand": "Hormel Black Labelmany",
       "price": "$60.67/6*1LB",
       "quantity": "0",
-      "status": ""
+      "status": "Approved"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "brand": "Hormel Black Labelmany",
       "price": "$60.67/6*1LB",
       "quantity": "0",
-      "status": ""
+      "status": "Approved"
     },
     {
       "id": 7,
