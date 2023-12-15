@@ -77,7 +77,7 @@ function Products() {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Image</TableCell>
+                  <TableCell></TableCell>
                   <TableCell component="th" scope="row">
                     Product name
                   </TableCell>
@@ -102,9 +102,9 @@ function Products() {
                     </TableCell>
                     <TableCell>{pro.title}</TableCell>
                     <TableCell>{pro.brand}</TableCell>
-                    <TableCell>{pro.price}</TableCell>
-                    <TableCell>{pro.quantity}</TableCell>
-                    <TableCell>{pro.total}</TableCell>
+                    <TableCell>${pro.price}</TableCell>
+                    <TableCell>{pro.quantity} <span style={{opacity:"0.5"}}>*6*1LB</span> </TableCell>
+                    <TableCell>${Math.floor((pro.price*pro.quantity)*100)/100 }</TableCell>
 
                     {/* <TableCell style={{ background: "#f3f3f3" }}>
                       {pro.status === "Missing - Urgent" ? (
@@ -118,15 +118,16 @@ function Products() {
                       )}
                     </TableCell> */}
 
-                    <TableCell style={{ background: "#f3f3f3" }}>
+                    <TableCell align="center" style={{ background: "#f3f3f3" , }}>
                       {pro.status === "Missing - Urgent" || pro.status === "Missing" ? (
                         <button
                           style={{
                             border: "1px solid #1e633f",
-                            fontSize: "15px",
+                            
                             borderRadius: "50px",
                             padding: "8px",
-                            width: "150px",
+                            width: "100px",
+                            fontSize: "10px",
                             background: pro.status === "Missing - Urgent" ? "red" : "#f66d44",
                             color: "white",
                             fontWeight: "bold",
@@ -140,10 +141,11 @@ function Products() {
                         <button
                           style={{
                             border: "1px solid #1e633f",
-                            fontSize: "15px",
+                        
                             borderRadius: "50px",
                             padding: "8px",
-                            width: "150px",
+                            // width: "100px",
+                            fontSize: "10px",
                             background: "green",
                             color: "white",
                             fontWeight: "bold",

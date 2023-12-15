@@ -5,7 +5,7 @@
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
+      "price": "60.67",
       "quantity": "0",
       "status": "Approved"
     },
@@ -14,8 +14,8 @@
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
-      "quantity": "0",
+      "price": "60.67",
+      "quantity": "2",
       "status": "Approved"
     },
     {
@@ -23,7 +23,7 @@
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
+      "price": "60.67",
       "quantity": "0",
       "status": "Approved"
     },
@@ -32,7 +32,7 @@
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
+      "price": "60.67",
       "quantity": "0",
       "status": "Missing - Urgent"
     },
@@ -41,8 +41,8 @@
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
-      "quantity": "0",
+      "price": "60.67",
+      "quantity": "15",
       "status": "Approved"
     },
     {
@@ -50,34 +50,34 @@
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
-      "quantity": "0",
-      "status": "Approved"
+      "price": "60.67",
+      "quantity": "10",
+      "status": "Missing - Urgent"
     },
     {
       "id": 7,
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
-      "quantity": "0",
-      "status": ""
+      "price": "60.67",
+      "quantity": "5",
+      "status": "Approved"
     },
     {
       "id": 8,
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
+      "price": "60.67",
       "quantity": "0",
-      "status": ""
+      "status": "Missing"
     },
     {
       "id": 9,
       "image": "https://drive.google.com/file/d/17wMahGnqw9yQx4NBi9BEFHjlqRUmv4ZV/view?usp=drive_link",
       "title": "Chicken Breast Filters, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
       "brand": "Hormel Black Labelmany",
-      "price": "$60.67/6*1LB",
+      "price": "60.67",
       "quantity": "0",
       "status": ""
     }
