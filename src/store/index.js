@@ -1,11 +1,11 @@
 // store.js
 
 import { configureStore } from "@reduxjs/toolkit";
-import productReducer from "./productSlice"; // Import the reducer, not the entire slice
+import productReducer from "./productSlice"; 
 
 const store = configureStore({
   reducer: {
-    products: productReducer, // Use the reducer, not the entire slice
+    products: productReducer, // Use the reducer
   },
 });
 

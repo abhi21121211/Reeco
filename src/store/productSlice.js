@@ -45,12 +45,12 @@ const productSlice = createSlice({
     error: null,
   },
   reducers: {
-    // Your existing reducers here...
+    
     showProducts(state, action) {
-      // Modify state as needed
+     
     },
     productUpdate(state, action) {
-      // Modify state as needed
+      
     },
   },
   extraReducers: (builder) => {

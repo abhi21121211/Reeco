@@ -24,7 +24,7 @@ import Avocado from "../images/Avocado.png";
 import { editProduct } from "../store/productSlice";
 import EditIcon from "@mui/icons-material/Edit";
 import TextField from "@mui/material/TextField";
-
+import SearchIcon from '@mui/icons-material/Search';
 
 function Products() {
 
@@ -105,8 +105,9 @@ function Products() {
   return (
     <div style={{ width: "90%", background: "white", border: "1px solid black", borderRadius: "10px", margin: "auto", marginTop: "20px" }}>
       <div style={{ margin: "20px" }}>
+      
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "20px" }}>
-          <input type="text" placeholder="Search...." style={{ width: "40%", borderRadius: "20px", border: "1px solid black" }} />
+          <input type="text" placeholder="Search...." style={{ width: "40%", borderRadius: "20px", border: "1px solid black" }} ></input>
           <div>
             <button style={{ border: "1px solid #1e633f", fontSize: "15px", borderRadius: "50px", padding: "8px", width: "100px", background: "white", color: "#1e633f", fontWeight: "bold" }}>
               Add item
