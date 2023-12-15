@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# REECO - React Redux eCommerce Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Website](https://img.shields.io/badge/Website-Visit%20Now-blue)](https://reeco-abhishek.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-brightgreen)](https://github.com/abhi21121211/Reeco)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+REECO is a modern eCommerce application built using React, Redux, JSON Server, and Material-UI. It provides a user-friendly interface for managing products, tracking inventory, and handling product approval workflows.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Product Management:**
+  - Add new products with images, titles, brands, prices, quantities, and total values.
+  - View a list of existing products with essential details.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Status Management:**
+  - Mark products as "Approved," "Missing," or "Missing - Urgent."
 
-### `npm test`
+- **Approval Workflow:**
+  - Approve products with a single click.
+  - Mark missing products with the option to choose urgency.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Search Functionality:**
+  - Easily search for products using a search bar.
 
-### `npm run build`
+- **Product Update:**
+  - Edit product details, including price and quantity.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   git clone https://github.com/abhi21121211/Reeco.git
