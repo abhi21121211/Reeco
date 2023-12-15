@@ -7,6 +7,7 @@ export const fetchProducts = createAsyncThunk("product/fetchProducts", async () 
   return data;
 });
 
+
 // Async thunk for marking a product as approved
 export const approveProduct = createAsyncThunk("product/approveProduct", async (productId) => {
   // Perform an API call to update the status on the server
@@ -81,8 +82,28 @@ const productSlice = createSlice({
         if (index !== -1) {
           state.products[index] = updatedProduct;
         }
-      });
+      })
+      .addCase(editProduct.fulfilled, (state, action) => {
+        const updatedProduct = action.payload;
+        const index = state.products.findIndex((pro) => pro.id === updatedProduct.id);
+        if (index !== -1) {
+          state.products[index] = updatedProduct;
+        }
+      })
   },
+});
+
+export const editProduct = createAsyncThunk("product/editProduct", async ({ productId, price, quantity }) => {
+  // Perform an API call to update the price and quantity on the server
+  const response = await fetch(`http://localhost:3000/products/${productId}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ price, quantity }),
+  });
+  const updatedProduct = await response.json();
+  return updatedProduct;
 });
 
 export const { showProducts, productUpdate } = productSlice.actions;

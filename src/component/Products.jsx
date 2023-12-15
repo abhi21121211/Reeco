@@ -21,8 +21,50 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { fetchProducts, approveProduct, markProductMissing } from "../store/productSlice";
 import Avocado from "../images/Avocado.png";
+import { editProduct } from "../store/productSlice";
+import EditIcon from "@mui/icons-material/Edit";
+import TextField from "@mui/material/TextField";
+
 
 function Products() {
+
+  // State for the edit dialog
+  const [editDialogOpen, setEditDialogOpen] = useState(false);
+  const [editedProductId, setEditedProductId] = useState(null);
+  const [editedPrice, setEditedPrice] = useState("");
+  const [editedQuantity, setEditedQuantity] = useState("");
+
+  // Function to open the edit dialog
+  const openEditDialog = (productId, initialPrice, initialQuantity) => {
+    setEditedProductId(productId);
+    setEditedPrice(initialPrice.toString());
+    setEditedQuantity(initialQuantity.toString());
+    setEditDialogOpen(true);
+  };
+
+  // Function to close the edit dialog
+  const closeEditDialog = () => {
+    setEditDialogOpen(false);
+    setEditedProductId(null);
+    setEditedPrice("");
+    setEditedQuantity("");
+  };
+
+  // Function to handle the edit submission
+  const handleEditSubmit = () => {
+    // Validate price and quantity before dispatching the edit action
+    const isValidPrice = /^\d+(\.\d{1,2})?$/.test(editedPrice);
+    const isValidQuantity = /^\d+$/.test(editedQuantity);
+
+    if (isValidPrice && isValidQuantity) {
+      dispatch(editProduct({ productId: editedProductId, price: parseFloat(editedPrice), quantity: parseInt(editedQuantity) }));
+      closeEditDialog();
+    } else {
+      // Handle invalid input (e.g., show an error message)
+    }
+  };
+
+
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector((state) => state.products);
   const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false);
@@ -103,8 +145,8 @@ function Products() {
                     <TableCell>{pro.title}</TableCell>
                     <TableCell>{pro.brand}</TableCell>
                     <TableCell>${pro.price}</TableCell>
-                    <TableCell>{pro.quantity} <span style={{opacity:"0.5"}}>*6*1LB</span> </TableCell>
-                    <TableCell>${Math.floor((pro.price*pro.quantity)*100)/100 }</TableCell>
+                    <TableCell>{pro.quantity} <span style={{ opacity: "0.5" }}>*6*1LB</span> </TableCell>
+                    <TableCell>${Math.floor((pro.price * pro.quantity) * 100) / 100}</TableCell>
 
                     {/* <TableCell style={{ background: "#f3f3f3" }}>
                       {pro.status === "Missing - Urgent" ? (
@@ -118,12 +160,12 @@ function Products() {
                       )}
                     </TableCell> */}
 
-                    <TableCell align="center" style={{ background: "#f3f3f3" , }}>
+                    <TableCell align="center" style={{ background: "#f3f3f3", }}>
                       {pro.status === "Missing - Urgent" || pro.status === "Missing" ? (
                         <button
                           style={{
                             border: "1px solid #1e633f",
-                            
+
                             borderRadius: "50px",
                             padding: "8px",
                             width: "100px",
@@ -141,7 +183,7 @@ function Products() {
                         <button
                           style={{
                             border: "1px solid #1e633f",
-                        
+
                             borderRadius: "50px",
                             padding: "8px",
                             // width: "100px",
@@ -179,7 +221,8 @@ function Products() {
                       {/* <IconButton onClick={() => handleMarkMissing(pro.id, false)}>
                         <CloseIcon style={{ fontSize: "1.5rem", margin: "10px" }} />
                       </IconButton> */}
-                      <button style={{ fontSize: "1.5rem", marginLeft: "5px", marginTop: "-50px", border: "none" }}>Edit</button>
+                      <button onClick={() => openEditDialog(pro.id, pro.price, pro.quantity)} style={{ fontSize: "1.5rem", marginLeft: "5px", marginTop: "-50px", border: "none" }}>Edit</button>
+                      
                     </TableCell>
                   </TableRow>
                 ))}
@@ -200,6 +243,42 @@ function Products() {
           <Button onClick={handleConfirmationDialogConfirm}>Yes</Button>
         </DialogActions>
       </Dialog>
+
+      {/* Edit Dialog */}
+      {products.map((pro) => (
+      <Dialog open={editDialogOpen} onClose={closeEditDialog}>
+     
+        <DialogTitle>{pro.title}</DialogTitle>
+        <span style={{paddingLeft:"20px" , opacity:"0.5"}}>{pro.brand}</span>
+        <div style={{display:"flex"}}>
+          <div >
+            <img src={Avocado} alt="" style={{width:"100px"}}/>
+          </div>
+        <DialogContent>
+          <TextField
+            label="Price"
+            type="number"
+            value={editedPrice}
+            onChange={(e) => setEditedPrice(e.target.value)}
+            fullWidth
+            style={{margin:'20px 0px'}}
+          />
+
+          <TextField
+            label="Quantity"
+            type="number"
+            value={editedQuantity}
+            onChange={(e) => setEditedQuantity(e.target.value)}
+            fullWidth
+          />
+        </DialogContent>
+        </div>
+        <DialogActions>
+          <Button onClick={closeEditDialog}>Cancel</Button>
+          <Button onClick={handleEditSubmit}>Save</Button>
+        </DialogActions>
+      </Dialog>
+         ))}
     </div>
   );
 }
