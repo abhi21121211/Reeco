@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchProducts = createAsyncThunk("product/fetchProducts", async () => {
-  const response = await fetch("http://localhost:3000/products");
+  const response = await fetch("https://reeco-server1.onrender.com/products");
   const data = await response.json();
   return data;
 });
@@ -11,7 +11,7 @@ export const fetchProducts = createAsyncThunk("product/fetchProducts", async () 
 // Async thunk for marking a product as approved
 export const approveProduct = createAsyncThunk("product/approveProduct", async (productId) => {
   // Perform an API call to update the status on the server
-  const response = await fetch(`http://localhost:3000/products/${productId}`, {
+  const response = await fetch(`https://reeco-server1.onrender.com/products/${productId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export const approveProduct = createAsyncThunk("product/approveProduct", async (
 export const markProductMissing = createAsyncThunk("product/markProductMissing", async ({ productId, urgent }) => {
   // Perform an API call to update the status on the server
   const status = urgent ? "Missing - Urgent" : "Missing";
-  const response = await fetch(`http://localhost:3000/products/${productId}`, {
+  const response = await fetch(`https://reeco-server1.onrender.com/products/${productId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -95,7 +95,7 @@ const productSlice = createSlice({
 
 export const editProduct = createAsyncThunk("product/editProduct", async ({ productId, price, quantity }) => {
   // Perform an API call to update the price and quantity on the server
-  const response = await fetch(`http://localhost:3000/products/${productId}`, {
+  const response = await fetch(`https://reeco-server1.onrender.com/products/${productId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
